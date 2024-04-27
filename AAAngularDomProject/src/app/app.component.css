@@ -1,0 +1,45 @@
+
+.example-form {
+    min-width: 40%;
+    max-width: 40%;
+    width: 100%;
+    background-color: beige;
+  }
+
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 20px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 200px;
+    margin-left: 10%;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  .marigin20{
+    margin-right: 20px;
+  }
+  
+  

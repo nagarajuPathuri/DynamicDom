@@ -1,0 +1,10 @@
+<!-- <select id="data.id">
+    <option *ngFor="let option of data.data" [value]="option">{{ option }}</option>
+  </select> -->
+
+<mat-form-field class="example-full-width">
+    <mat-label>Select</mat-label>
+    <select matNativeControl required>
+        <option *ngFor="let option of data.data" [value]="option">{{ option }}</option>
+         </select>
+  </mat-form-field>

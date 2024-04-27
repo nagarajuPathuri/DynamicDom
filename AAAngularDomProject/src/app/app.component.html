@@ -1,0 +1,75 @@
+<form class="example-form">
+  <mat-card>
+    <mat-card-header>
+      
+      <mat-card-title>Click and Display</mat-card-title>
+      <!-- <mat-card-subtitle>!!!</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-content>
+
+      <div class="example-label">
+        <button mat-button> Text Box</button>
+      </div>
+      <div class="example-button-row">
+        <button mat-raised-button (click)="addRemoveTextBox(true)">+1</button>
+        <button mat-raised-button (click)="addRemoveTextBox(false)">-1</button>
+      </div>
+      <div class="example-label">
+        <mat-label> = </mat-label>
+        <button mat-button> {{element.textbox}}</button>
+      </div>
+    </mat-card-content>
+    <mat-card-content>
+
+      <div class="example-label">
+        <button mat-button> Check Box </button>
+      </div>
+
+      <div class="example-button-row">
+        <button mat-raised-button (click)="addRemoveCheckBox(true)">+1</button>
+        <button mat-raised-button (click)="addRemoveCheckBox(false)">-1</button>
+      </div>
+      <div class="example-label">
+        <mat-label> = </mat-label>
+        <button mat-button> {{element.checkbox}}</button>
+      </div>
+    </mat-card-content>
+    <mat-card-content>
+      <div class="example-label">
+        <button mat-button> Select </button>
+      </div>
+      <div class="example-button-row">
+        <button mat-raised-button (click)="addRemoveSelect(true)">+1</button>
+        <button mat-raised-button (click)="addRemoveSelect(false)">-1</button>
+      </div>
+      <div class="example-label">
+        <mat-label> = </mat-label>
+        <button mat-button> {{element.select}}</button>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+
+      <div class="example-button-row" style="">
+        <button mat-flat-button color="primary" (click)="fetchData()">Submit</button>
+        <button mat-flat-button color="warn" (click)="reset()">Reset</button>
+      </div>
+    </mat-card-actions>
+
+  </mat-card>
+  <mat-card style="margin-top: 2%;">
+    <mat-card-content>
+      <div *ngFor="let item of jsonData" style="flex-wrap: wrap;">
+        <div *ngIf="item.type === 'text'" class="marigin20">
+          <app-text [data]="item"></app-text>
+        </div>
+        <div *ngIf="item.type === 'checkbox'" class="marigin20">
+          <app-checkbox [data]="item"></app-checkbox>
+        </div>
+        <div *ngIf="item.type === 'dropdown'" class="marigin20">
+          <app-dropdown [data]="item"></app-dropdown>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>
